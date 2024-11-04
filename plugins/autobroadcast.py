@@ -11,8 +11,7 @@ AUTO_GCASTS = AUTO_GCAST.strip().lower() == "on"
 
 START_IMG_URLS = "https://files.catbox.moe/6iv99c.jpg"
 
-MESSAGE = f"""**"Introducing the public music + management repo for our bot! 🎶✨ Now, you can explore the code, contribute, and help make @MeowstericXBot , @musicXanime_bot , @Kitty_musicXbot , @FIX_X_MUSIC_BOT even better. Dive into the repo and join the community—music lovers and coders alike! 🐾📂""""
-
+MESSAGE = f"""**Introducing the public music + management repo for our bot! 🎶✨ Now, you can explore the code, contribute, and help make @MeowstericXBot, @musicXanime_bot, @Kitty_musicXbot, @FIX_X_MUSIC_BOT even better. Dive into the repo and join the community—music lovers and coders alike! 🐾📂**"""
 BUTTON = InlineKeyboardMarkup(
     [
         [
