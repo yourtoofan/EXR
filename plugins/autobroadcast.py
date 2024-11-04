@@ -11,27 +11,28 @@ AUTO_GCASTS = AUTO_GCAST.strip().lower() == "on"
 
 START_IMG_URLS = "https://files.catbox.moe/6iv99c.jpg"
 
-MESSAGE = f"""**๏ ᴛʜɪs ɪs ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs + ᴄʜᴀɴɴᴇʟs ᴠᴄ. 💌
-
-🎧 ᴘʟᴀʏ + ᴠᴘʟᴀʏ + ᴄᴘʟᴀʏ 🎧
-
-➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ - ʟᴇғᴛ ɴᴏᴛɪᴄᴇ, ᴛᴀɢᴀʟʟ, ᴠᴄᴛᴀɢ, ʙᴀɴ - ᴍᴜᴛᴇ, sʜᴀʏʀɪ, ʟᴜʀɪᴄs, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... ❤️
-
-🔐ᴜꜱᴇ » [/start](https://t.me/{app.username}?start=help) ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
-
-➲ ʙᴏᴛ :** @{app.username}"""
+MESSAGE = f"""**"Introducing the public music + management repo for our bot! 🎶✨ Now, you can explore the code, contribute, and help make @MeowstericXBot , @musicXanime_bot , @Kitty_musicXbot , @FIX_X_MUSIC_BOT even better. Dive into the repo and join the community—music lovers and coders alike! 🐾📂""""
 
 BUTTON = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏",
-                url=f"https://t.me/musicXanime_bot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
+                "+ Add me to your clan darlo +",
+                url="https://t.me/musicXanime_bot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "+ Repo +",
+                url="https://github.com/moonshining1/ANNIE-MUSIC/fork",  # Replace with your actual group invite link
+            ),
+            InlineKeyboardButton(
+                "+ Updates +",
+                url="https://t.me/kittyxupdates",  # Replace with your actual contact link
             )
         ]
     ]
 )
-
 caption = f"""{AUTO_GCAST_MSG}""" if AUTO_GCAST_MSG else MESSAGE
 
 TEXT = """**ᴀᴜᴛᴏ ɢᴄᴀsᴛ ɪs ᴇɴᴀʙʟᴇᴅ sᴏ ᴀᴜᴛᴏ ɢᴄᴀsᴛ/ʙʀᴏᴀᴅᴄᴀsᴛ ɪs ᴅᴏɪɴɢ ɪɴ ᴀʟʟ ᴄʜᴀᴛs ᴄᴏɴᴛɪɴᴜᴏᴜsʟʏ.**\n**ɪᴛ ᴄᴀɴ ʙᴇ sᴛᴏᴘᴘᴇᴅ ʙʏ ᴘᴜᴛ ᴠᴀʀɪᴀʙʟᴇ [ᴀᴜᴛᴏ_ɢᴄᴀsᴛ = (Off)]**"""
