@@ -11,8 +11,8 @@
 
 
 ### 🖇 VPS Deployment
-- Get your [Necessary Variables](https://github.com/MOONSHINING1/ANNIE-MUSIC/blob/master/sample.env)
-- clone repo : `git clone https://github.com/MOONSHINING1/ANNIE-MUSIC && cd ANNIE-MUSIC`
+- Get your [Necessary Variables](https://github.com/yourtoofan/MOMMYMUSIC/blob/master/sample.env)
+- clone repo : `git clone https://github.com/yourtoofan/MOMMYMUSIC && cd ANNIE-MUSIC`
 - Setup by : `bash setup`
 - Install tmux to keep running your bot when you close the terminal by :
 `sudo apt install tmux && tmux`
@@ -21,4 +21,4 @@
 - For getting out from tmux session : Press `Ctrl+b` and then `d`<br>
 
 
-# For more help checkout [ANNIEMUSIC](https://github.com/MOONSHINING1/ANNIE-MUSIC
+# For more help checkout [MOMMYMUSIC](https://github.com/yourtoofan/MOMMYMUSIC) 
