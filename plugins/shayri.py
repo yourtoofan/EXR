@@ -67,10 +67,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/grandxmasti"
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/The_incricible"
                     ),
                     InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/kittyxupdates"
+                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/ZOYU_SUPPORT"
                     ),
                 ]
             ]
@@ -86,10 +86,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/grandxmasti"
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/THE_INCRICIBLE"
                     ),
                     InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/kittyxupdates"
+                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/ZOYU_SUPPORT"
                     ),
                 ]
             ]
@@ -162,7 +162,7 @@ async def send_good_night():
         return
     for chat_id in chats:
         try:
-            if chat_id == -1002024032988:
+            if chat_id == -1002046320443:
                 continue
             shayari = random.choice(night_shayari)
             await app.send_photo(
@@ -186,7 +186,7 @@ async def send_good_morning():
         return
     for chat_id in chats:
         try:
-            if chat_id == -1002024032988:
+            if chat_id == -1002046320443:
                 continue
             shayari = random.choice(morning_shayari)
             await app.send_photo(
