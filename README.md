@@ -12,7 +12,7 @@
 
 ### 🖇 VPS Deployment
 - Get your [Necessary Variables](https://github.com/yourtoofan/MOMMYMUSIC/blob/master/sample.env)
-- clone repo : `git clone https://github.com/yourtoofan/MOMMYMUSIC && cd ANNIE-MUSIC`
+- clone repo : `git clone https://github.com/yourtoofan/MOMMYMUSIC && cd MOMMYMUSIC`
 - Setup by : `bash setup`
 - Install tmux to keep running your bot when you close the terminal by :
 `sudo apt install tmux && tmux`
